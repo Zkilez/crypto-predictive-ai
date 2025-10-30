@@ -1,0 +1,30 @@
+{
+  "BTC": {
+    "prediction": "BULLISH",
+    "confidence": 0.5451145598236763,
+    "confidence_status": "BAJA",
+    "threshold": 0.25,
+    "timestamp": "2025-10-29 11:01:57"
+  },
+  "ETH": {
+    "prediction": "BULLISH",
+    "confidence": 0.5869809978532211,
+    "confidence_status": "BAJA",
+    "threshold": 0.3,
+    "timestamp": "2025-10-29 11:01:57"
+  },
+  "SOL": {
+    "prediction": "BEARISH",
+    "confidence": 1,
+    "confidence_status": "ALTA",
+    "threshold": 0.3,
+    "timestamp": "2025-10-29 11:01:57"
+  },
+  "BNB": {
+    "prediction": "BULLISH",
+    "confidence": 0.3493557277764932,
+    "confidence_status": "BAJA",
+    "threshold": 0.05,
+    "timestamp": "2025-10-29 11:01:57"
+  }
+}

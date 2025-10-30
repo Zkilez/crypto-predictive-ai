@@ -1,0 +1,12 @@
+{
+    "backtest_period": {
+        "start_date": "2025-10-19",
+        "end_date": "2025-10-29"
+    },
+    "model_info": {
+        "trained_date": "2025-10-29T10:04:07.477895",
+        "min_confidence_threshold": 0.8,
+        "threshold_metric": "f1"
+    },
+    "results": {}
+}
