@@ -111,35 +111,7 @@ Esto creará `predictions.json` con las predicciones actuales.
 npm run dev
 \`\`\`
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-## 📊 Estructura del Proyecto
-
-\`\`\`
-crypto-predictor/
-├── app/
-│   ├── api/
-│   │   ├── predictions/route.ts    # API endpoint para predicciones
-│   │   └── train/route.ts          # API endpoint para entrenamiento
-│   ├── page.tsx                    # Página principal
-│   ├── layout.tsx                  # Layout de la app
-│   └── globals.css                 # Estilos globales
-├── components/
-│   ├── crypto-prediction-dashboard.tsx  # Dashboard principal
-│   ├── confidence-gauge.tsx             # Medidor de confianza
-│   ├── prediction-chart.tsx             # Gráfico de predicción
-│   ├── correlation-heatmap.tsx          # Heatmap de correlaciones
-│   ├── order-book.tsx                   # Profundidad de mercado
-│   ├── volume-chart.tsx                 # Gráfico de volumen
-│   └── probability-distribution.tsx     # Distribución de probabilidad
-├── scripts/
-│   ├── fetch_crypto_data.py        # Obtener datos históricos
-│   ├── train_model.py              # Entrenar modelo ML
-│   └── predict.py                  # Generar predicciones
-├── crypto_historical_data.json     # Datos históricos (generado)
-├── crypto_prediction_model.pkl     # Modelo entrenado (generado)
-└── predictions.json                # Predicciones actuales (generado)
-\`\`\`
 
 ## 🤖 Cómo Funciona el Modelo
 
@@ -239,32 +211,5 @@ rf_model = RandomForestClassifier(
 
 En `train_model.py`, modifica:
 
-\`\`\`python
-# Predecir 7 días en lugar de 3
-df['future_price'] = df['price'].shift(-7)
-\`\`\`
-
-## 📝 Licencia
-
-MIT License - Libre para uso personal y comercial.
-
-## 🤝 Contribuciones
-
-¡Las contribuciones son bienvenidas! Por favor:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature
-3. Commit tus cambios
-4. Push a la rama
-5. Abre un Pull Request
-
-## 📧 Soporte
-
-Si tienes preguntas o problemas:
-- Abre un issue en GitHub
-- Revisa la documentación
-- Consulta los logs de error
-
----
 
 **¡Feliz trading! 🚀📈**
