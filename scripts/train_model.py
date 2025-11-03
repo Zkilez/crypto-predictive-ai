@@ -451,7 +451,17 @@ def train_model(crypto_data):
 def main():
     # Cargar datos históricos
     try:
-        with open('crypto_historical_data.json', 'r') as f:
+        import os
+        data_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'crypto_historical_data.json')
+        
+        # Si no existe el archivo, ejecutar fetch_crypto_data.py
+        if not os.path.exists(data_path):
+            print("No se encontró el archivo de datos históricos. Obteniendo datos reales...")
+            from fetch_crypto_data import main as fetch_data
+            fetch_data()
+        
+        # Cargar datos
+        with open(data_path, 'r') as f:
             crypto_data = json.load(f)
         
         print(f"✓ Datos cargados: {len(crypto_data)} criptomonedas")
@@ -461,9 +471,11 @@ def main():
         
     except FileNotFoundError:
         print("Error: No se encontró crypto_historical_data.json")
-        print("Ejecuta primero: fetch_crypto_data.py")
+        print("Ejecuta primero: python scripts/fetch_crypto_data.py")
     except Exception as e:
         print(f"Error durante el entrenamiento: {str(e)}")
+        import traceback
+        traceback.print_exc()
 
 if __name__ == "__main__":
     main()

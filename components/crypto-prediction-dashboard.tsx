@@ -281,7 +281,7 @@ export function CryptoPredictionDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 p-6 md:p-10">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 p-6 md:p-10" suppressHydrationWarning>
       <div className="mx-auto max-w-[1600px] space-y-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="space-y-2">

@@ -1,0 +1,19 @@
+# Archivos de datos grandes que no son necesarios en producción
+crypto_historical_data.json
+crypto_prediction_model.pkl
+predictions.json
+
+# Scripts de Python (solo necesarios para desarrollo local)
+scripts/
+backtest_results/
+
+# Archivos de desarrollo
+*.log
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos temporales
+*.tmp
+*.temp

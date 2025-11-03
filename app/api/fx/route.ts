@@ -8,8 +8,11 @@ type Supported = (typeof SUPPORTED_CURRENCIES)[number]
 export async function GET() {
   try {
     // Usamos exchangerate.host que no requiere API key
-    const res = await fetch("https://api.exchangerate.host/latest?base=USD")
-    if (!res.ok) throw new Error(`FX error: ${res.status}`)
+    const res = await fetch("https://api.exchangerate.host/latest?base=USD&symbols=EUR,MXN,COP,BRL,USD", {
+      next: { revalidate: 3600 } // Cache por 1 hora, las tasas no cambian tan rápido
+    })
+    
+    if (!res.ok) throw new Error(`FX error: ${res.status} ${await res.text()}`)
     const data = await res.json()
 
     const rates: Record<Supported, number> = {
